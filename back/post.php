@@ -22,7 +22,6 @@ require "./header.php";
                      <td>The quick brown fox jumps over the lazy dogs</td>
                      <td>12/3/2021</td>
                   </tr>
-                 
                </tbody>
             </table>
          </div>
