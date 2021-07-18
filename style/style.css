@@ -1,0 +1,224 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap");
+/* common styling */
+* {
+  font-family: "Quicksand", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #0d6efd;
+}
+/* heade css  */
+#main-nav {
+  text-align: center;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  background-color: #7f8c8d;
+}
+#main-nav h1 {
+  font-size: 2rem;
+  color: white;
+}
+#main-nav ul {
+  list-style: none;
+  display: flex;
+  margin-bottom: 0px;
+  justify-content: center;
+}
+#main-nav ul li {
+  margin: 0px 2px;
+}
+#main-nav ul li a {
+  color: white;
+  display: block;
+  padding: 10px;
+  font-size: 18px;
+}
+#main-nav ul li a::after {
+  position: relative;
+  content: "";
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 3px;
+  transition: 0.5s;
+}
+#main-nav ul li a:hover::after {
+  background-color: white;
+}
+a#home::after {
+  position: relative;
+  content: "";
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+}
+#menu a.btn::after {
+  display: none;
+}
+#search {
+  padding: 5px;
+  background-color: #7f8c8d;
+}
+#search form {
+  display: inline-block;
+}
+/* index page css  */
+#main-sec {
+  text-align: center;
+  margin-top: 50px;
+}
+#main-sec ul li {
+  text-align: left;
+}
+#main-sec .col-md-3 h3 {
+  font-size: 1.5rem;
+}
+#main-sec .col-md-3 ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+#main-sec .col-md-3 ul li {
+  padding: 5px;
+  background-color: #7f8c8d;
+  margin-top: 3px;
+  border-radius: 3px;
+}
+#main-sec .col-md-3 ul li a {
+  color: white;
+}
+#main-sec #topics ul li{
+  color: white;
+}
+#main-sec .col-md-3 ul li a span {
+  color: rgb(16, 17, 16);
+  font-weight: bold;
+}
+#main-sec .col-md-6 h2 {
+  margin-bottom: 20px;
+  color: #7f8c8d;
+}
+#main-sec .col-md-6 img {
+  width: 100%;
+  height: 100%;
+}
+#main-sec .col-md-6 p {
+  text-align: justify;
+  margin-top: 4px;
+  color: #20747a;
+}
+
+/* topics css  */
+#topics-sec {
+  text-align: center;
+}
+#topics-sec h4,
+h1 {
+  color: #7f8c8d;
+}
+#topics-sec .card {
+  border: none;
+  margin: 10px;
+}
+#topics-sec img {
+  height: auto;
+  width: 100%;
+}
+#topics-sec a {
+  color: #20747a;
+}
+/* how-to-use file css  */
+#steps {
+  text-align: center;
+  margin-top: 20px;
+  color: #20747a;
+}
+#steps h2 {
+  margin-bottom: 20px;
+  display: inline-block;
+}
+#steps h2::after {
+  margin-bottom: 20px;
+  position: relative;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #7f8c8d;
+  margin-top: 4px;
+}
+#steps ul {
+  list-style: none;
+}
+#steps ul li {
+  text-align: left;
+  margin-bottom: 3px;
+}
+
+/* footer css  */
+#web-footer {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  position: sticky;
+  top: 100vh;
+}
+#web-footer a {
+  color: white;
+  padding: 10px;
+}
+/* BACKEND STYLING */
+/* ------------------------------*/
+/* login page css */
+.container#login{
+ padding: 121px;
+ color:#20747a ;
+}
+/* login header css  */
+header#adman-header{
+  background-color: #7f8c8d;
+}
+#adman-header ul{
+  display: flex;
+  list-style: none;
+  margin: 0px;
+  background-color: #20747a;
+}
+#adman-header ul li a{
+  display: block;
+  padding: 10px;
+  color: white;
+  background-color:#20747a;
+}
+#adman-header h1{
+  color: white;
+  font-size: 2rem;
+}
+/*------------------------------ */
+/* small screen  */
+@media (max-width: 576px) {
+  /* index page  */
+  #main-sec {
+    margin-top: 20px;
+  }
+  #main-sec #topics {
+    order: 1;
+  }
+  #main-sec #recent {
+    order: 2;
+  }
+  #web-footer {
+    margin-top: 5px;
+    padding: 1px;
+  }
+  /* topics css */
+  #topics-sec .img-in-card {
+    padding: 10px;
+  }
+}
