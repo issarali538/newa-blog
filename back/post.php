@@ -40,7 +40,7 @@ $pagination = new Database();
                         <th scope="row"><?php echo $value["post_id"] ?></th>
                         <td><?php echo $value["title"] ?></td>
                         <td>
-                           <div id="img-cell"><img src="../<?php echo $value['img'] ?>" alt="not showing"></div>
+                           <div id="img-cell"><img src="../img/<?php echo $value['img'] ?>" alt="not showing"></div>
                         </td>
                         <td><?php echo $value["date"] ?></td>
                      </tr>

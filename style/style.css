@@ -206,10 +206,11 @@ header#adman-header {
   margin: 0px;
 }
 #img-cell{
-  width: 30px;
-  height: 30px;
+  position:  relative;
+  width: 20px;
+  height: 20px;
 }
-#img-cell > img{
+#img-cell  img{
   width: 100%;
   height: 100%;
 }

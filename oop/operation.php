@@ -64,6 +64,8 @@ class Database
    {
       if ($this->tableExist($table)) {
          $query = "INSERT INTO $table($col) VALUES($values)";
+         // echo $query;
+         // die();
          $result = $this->mysqli->query($query);
          if ($result) {
             return true;
@@ -87,8 +89,8 @@ class Database
    // to validate the file size, extention 
    function file_validation($file_size, $f_ext)
    {
-      $ext_array = ["PNG", "jpg", "jpeg", "png", "JPG", "JPEG"];
-      if (in_array($f_ext, $ext_array, true)) {
+      $ext_array = ["png", "jpg", "jpeg"];
+      if (in_array(strtolower($f_ext), $ext_array, true)) {
          if ($file_size <= 1048576) {
            $this->result = "";
          }else{

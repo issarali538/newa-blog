@@ -14,6 +14,18 @@ $insrt_post = new Database();
             <div class="for-group form-group-sm mb-2">
                <textarea name="desc" required class="form-control" placeholder="Description" cols="30" rows="10"></textarea>
             </div>
+            <div class="form-group form-group-sm mb-2">
+               <select name="category" class="form-control">
+                  <option selected disabled>Insert into category</option>
+                  <?php
+                  $insrt_post->only_selection("*", "category");
+                  foreach ($insrt_post->getResults() as $key => $value) {
+
+                     echo  '<option value="' . $value['category_id'] . '">' . $value['category_name'] . '</option>';
+                  }
+                  ?>
+               </select>
+            </div>
             <div class="for-group form-group-sm mb-2">
                <input type="file" value="" required name="file" class="form-control">
             </div>
