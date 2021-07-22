@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
    <link rel="stylesheet" href="../style/bootstrap.css">
    <link rel="stylesheet" href="../style/style.css">
 </head>
+
 <body>
    <header id="adman-header">
       <div class="container">
@@ -15,7 +17,7 @@
             <div class="col-md-8">
                <ul>
                   <li><a href="#">Posts</a></li>
-                  <li><a href="#">Add Post</a></li>
+                  <li><a href="./add-post.php">Add Post</a></li>
                </ul>
             </div>
             <div class="col-md-4">
@@ -25,4 +27,5 @@
       </div>
    </header>
 </body>
+
 </html>

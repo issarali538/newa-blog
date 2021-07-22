@@ -93,7 +93,7 @@ a#home::after {
 #main-sec .col-md-3 ul li a {
   color: white;
 }
-#main-sec #topics ul li{
+#main-sec #topics ul li {
   color: white;
 }
 #main-sec .col-md-3 ul li a span {
@@ -176,29 +176,42 @@ h1 {
 /* BACKEND STYLING */
 /* ------------------------------*/
 /* login page css */
-.container#login{
- padding: 121px;
- color:#20747a ;
+.container#login {
+  padding: 121px;
+  color: #20747a;
 }
-/* login header css  */
-header#adman-header{
+/* header css  */
+header#adman-header {
   background-color: #7f8c8d;
 }
-#adman-header ul{
+#adman-header ul {
   display: flex;
   list-style: none;
   margin: 0px;
-  background-color: #20747a;
 }
-#adman-header ul li a{
+#adman-header ul li a {
   display: block;
   padding: 10px;
   color: white;
-  background-color:#20747a;
 }
-#adman-header h1{
+#adman-header ul li a:hover {
+  background-color: #20747a;
+}
+#adman-header h1 {
   color: white;
   font-size: 2rem;
+}
+/* posts page css  */
+#post-pagination{
+  margin: 0px;
+}
+#img-cell{
+  width: 30px;
+  height: 30px;
+}
+#img-cell > img{
+  width: 100%;
+  height: 100%;
 }
 /*------------------------------ */
 /* small screen  */

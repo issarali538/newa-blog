@@ -22,14 +22,14 @@ class Database
       $result = $this->mysqli->query($query);
       if ($result->num_rows > 0) {
          $this->result = $result->fetch_all(MYSQLI_ASSOC);
-        return true;
+         return true;
       } else {
          array_push($this->result, $this->mysqli->error);
          return false;
       }
    }
    // special selection with condition 
-   function special_selection($columns, $table, $join =null, $condition = null, $order = null, $limit = null, $offset = null)
+   function special_selection($columns, $table, $join = null, $condition = null, $order = null, $limit = null, $offset = null)
    {
       if ($this->tableExist($table)) {
          $query = "SELECT $columns FROM $table";
@@ -48,7 +48,7 @@ class Database
          if ($offset != null) {
             $query .= " offset $offset";
          }
-         echo $query;
+         // echo $query;
          $result = $this->mysqli->query($query);
          if ($result->num_rows > 0) {
             $this->result = $result->fetch_all(MYSQLI_ASSOC);
@@ -71,6 +71,33 @@ class Database
             array_push($this->result, $this->mysqli->error . "Query is Failed on LINE : " . __LINE__);
             return false;
          }
+      }
+   }
+   function rows_in_table($table)
+   {
+      if ($this->tableExist($table)) {
+         $query = "SELECT * FROM $table";
+         $res = $this->mysqli->query($query);
+         if ($res) {
+            $num_rows = $res->num_rows;
+            return $num_rows;
+         }
+      }
+   }
+   // to validate the file size, extention 
+   function file_validation($file_size, $f_ext)
+   {
+      $ext_array = ["PNG", "jpg", "jpeg", "png", "JPG", "JPEG"];
+      if (in_array($f_ext, $ext_array, true)) {
+         if ($file_size <= 1048576) {
+           $this->result = "";
+         }else{
+            array_push($this->result , "Files size must be of 50 mb");
+         } 
+         return true;
+      }else{
+         array_push($this->result, "File  must be of type png, jpeg, or png");
+         return false;
       }
    }
    private function tableExist($table)
