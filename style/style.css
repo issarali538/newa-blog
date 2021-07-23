@@ -216,7 +216,7 @@ header#adman-header {
   height: 100%;
   cursor: pointer;
 }
-#img-cell img:hover #img-popover{
+#img-cell img:hover ~ #img-popover{
   display: block;
   position: absolute;
   padding: 50px;
