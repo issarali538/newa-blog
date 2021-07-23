@@ -91,7 +91,7 @@ class Database
    {
       $ext_array = ["png", "jpg", "jpeg"];
       if (in_array(strtolower($f_ext), $ext_array, true)) {
-         if ($file_size <= 1048576) {
+         if ($file_size <= 1360373) {
            $this->result = "";
          }else{
             array_push($this->result , "Files size must be of 50 mb");

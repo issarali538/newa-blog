@@ -19,6 +19,7 @@ $pagination = new Database();
                   <tr>
                      <th scope="col">id</th>
                      <th scope="col">Post Title</th>
+                     <th scope="col">image</th>
                      <th scope="col">Date</th>
                   </tr>
                </thead>
@@ -34,10 +35,12 @@ $pagination = new Database();
                   $offset = ($page - 1) * $limit;
                   $total_pages = ceil($total_records / $limit);
                   $post_table_date->special_selection("*", "post", null, null, null, $limit, $offset);
+                  // to show the numbering in the ascending order 
+                  $offset = 1;
                   foreach ($post_table_date->getResults() as $key => $value) {
                   ?>
                      <tr>
-                        <th scope="row"><?php echo $value["post_id"] ?></th>
+                        <th scope="row"><?php echo $offset ?></th>
                         <td><?php echo $value["title"] ?></td>
                         <td>
                            <div id="img-cell"><img src="../img/<?php echo $value['img'] ?>" alt="not showing"></div>
@@ -45,10 +48,16 @@ $pagination = new Database();
                         <td><?php echo $value["date"] ?></td>
                      </tr>
                   <?php
+                  $offset ++;
                   }
                   ?>
                </tbody>
             </table>
+            <div id="img-popover" class="d-none">
+               <div>
+                  <img src="../img/landscap1.jpg" alt="no suported ">
+               </div>
+            </div>
          </div>
          <div class="col-md-12">
             <ul class="pagination justify-content-center" id="post-pagination">

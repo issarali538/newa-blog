@@ -39,7 +39,7 @@ require "../oop/operation.php";
                   <?php echo $all['title']; ?>
                </h2>
                <div>
-                  <img src="../<?php echo $all['img']; ?>" alt="not supported">
+                  <img src="../img/<?php echo $all['img']; ?>" alt="not supported">
                </div>
                <p class="lh-2">
                   <?php echo $all['description']; ?>

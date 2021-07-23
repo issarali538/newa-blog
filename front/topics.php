@@ -37,7 +37,7 @@
          ?>
                <div class="col-lg-2">
                   <div class="card">
-                     <img src="../<?php echo $value['img']; ?>" class="card-img-top" alt="...">
+                     <img src="../img/<?php echo $value['img']; ?>" class="card-img-top" alt="...">
                      <div class="card-body">
                         <p class="card-text"><a href="">
                               <?php echo $value["title"]; ?>
